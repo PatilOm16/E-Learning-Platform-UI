@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODTECH E-Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>CODTECH</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Courses</a></li>
+                    <li><a href="#progress">My Progress</a></li>
+                    <li><a href="#" id="dashboardLink">Dashboard</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Transform Your Career<br>with <span class="highlight">Expert-Led Courses</span></h1>
+            <p>Master in-demand skills with our comprehensive e-learning platform. From web development to data science, unlock your potential today.</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">150+</div>
+                    <div class="label">Active Courses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">50K+</div>
+                    <div class="label">Students</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">98%</div>
+                    <div class="label">Satisfaction</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="design">Design</button>
+                    <button class="filter-tab" data-filter="development">Development</button>
+                    <button class="filter-tab" data-filter="data">Data Science</button>
+                </div>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Course 1 -->
+                <div class="course-card" data-category="development" data-course="web-dev">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">WD</div>
+                        <span class="course-badge badge-popular">Popular</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 45 Lessons</span>
+                            <span>⏱️ 24 Hours</span>
+                        </div>
+                        <h3 class="course-title">Complete Web Development Bootcamp</h3>
+                        <p class="course-description">Master HTML, CSS, JavaScript, React, Node.js and build real-world projects from scratch.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">AS</div>
+                                <span class="instructor-name">Alex Smith</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" data-category="design" data-course="ui-ux">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">UI</div>
+                        <span class="course-badge badge-new">New</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 32 Lessons</span>
+                            <span>⏱️ 18 Hours</span>
+                        </div>
+                        <h3 class="course-title">UI/UX Design Masterclass</h3>
+                        <p class="course-description">Learn design thinking, wireframing, prototyping with Figma and create stunning user experiences.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">MJ</div>
+                                <span class="instructor-name">Maria Johnson</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" data-category="data" data-course="python-ds">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">PY</div>
+                        <span class="course-badge badge-trending">Trending</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 52 Lessons</span>
+                            <span>⏱️ 30 Hours</span>
+                        </div>
+                        <h3 class="course-title">Python for Data Science</h3>
+                        <p class="course-description">Master Python, pandas, NumPy, and machine learning fundamentals for data analysis.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">DL</div>
+                                <span class="instructor-name">David Lee</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card" data-category="development" data-course="react">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">⚛️</div>
+                        <span class="course-badge badge-popular">Popular</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 38 Lessons</span>
+                            <span>⏱️ 20 Hours</span>
+                        </div>
+                        <h3 class="course-title">Advanced React & Redux</h3>
+                        <p class="course-description">Deep dive into React hooks, context API, Redux toolkit and build scalable applications.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">SK</div>
+                                <span class="instructor-name">Sarah Kim</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card" data-category="design" data-course="graphic">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">GD</div>
+                        <span class="course-badge badge-new">New</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 28 Lessons</span>
+                            <span>⏱️ 16 Hours</span>
+                        </div>
+                        <h3 class="course-title">Graphic Design Fundamentals</h3>
+                        <p class="course-description">Master Adobe Illustrator, Photoshop and create professional designs for print and web.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">JD</div>
+                                <span class="instructor-name">John Davis</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card" data-category="data" data-course="ml">
+                    <div class="course-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-family: 'Playfair Display', serif;">ML</div>
+                        <span class="course-badge badge-trending">Trending</span>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span>📚 60 Lessons</span>
+                            <span>⏱️ 35 Hours</span>
+                        </div>
+                        <h3 class="course-title">Machine Learning A-Z</h3>
+                        <p class="course-description">Learn supervised, unsupervised learning, neural networks and deploy ML models.</p>
+                        <div class="course-footer">
+                            <div class="course-instructor">
+                                <div class="instructor-avatar">EP</div>
+                                <span class="instructor-name">Emma Parker</span>
+                            </div>
+                            <div class="course-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-section" id="progress">
+            <div class="progress-header">
+                <h3>Your Learning Progress</h3>
+                <div class="overall-progress">
+                    <div class="progress-circle">
+                        <span class="progress-percent">65%</span>
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; margin-bottom: 0.3rem;">Overall Progress</div>
+                        <div style="color: #888; font-size: 0.9rem;">3 of 5 courses completed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-list">
+                <div class="progress-item">
+                    <div class="progress-item-header">
+                        <div class="progress-item-title">Complete Web Development Bootcamp</div>
+                        <div class="progress-item-percent">85%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 85%"></div>
+                    </div>
+                    <div class="progress-details">
+                        <span>38 of 45 lessons completed</span>
+                        <span>🔥 7 day streak</span>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-item-header">
+                        <div class="progress-item-title">UI/UX Design Masterclass</div>
+                        <div class="progress-item-percent">60%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 60%"></div>
+                    </div>
+                    <div class="progress-details">
+                        <span>19 of 32 lessons completed</span>
+                        <span>⏰ Last studied 2 days ago</span>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-item-header">
+                        <div class="progress-item-title">Python for Data Science</div>
+                        <div class="progress-item-percent">45%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 45%"></div>
+                    </div>
+                    <div class="progress-details">
+                        <span>23 of 52 lessons completed</span>
+                        <span>⏰ Last studied 5 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-player">
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-btn"></div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.5rem;">Continue Learning</h3>
+                    <p style="opacity: 0.8;">Resume: Building Your First React Component</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <div class="video-title">Web Development Bootcamp - Lesson 38</div>
+                <div class="video-meta">Duration: 24:35 • Instructor: Alex Smith • Next: State Management in React</div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join thousands of students achieving their goals with CODTECH</p>
+            <button class="cta-button">Explore All Courses</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CODTECH</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 0.5rem;">Empowering learners worldwide with quality education and practical skills.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Become Instructor</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 CODTECH E-Learning Platform. All rights reserved. | Internship Task-4
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Detail Modal -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-video">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle">Complete Web Development Bootcamp</h2>
+                <p id="modalDescription" style="color: #666; margin-bottom: 1.5rem;">Master modern web development from scratch. This comprehensive course covers everything from HTML & CSS fundamentals to advanced React and Node.js development.</p>
+                
+                <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <div style="font-weight: 700; color: #888; font-size: 0.85rem; margin-bottom: 0.3rem;">DURATION</div>
+                        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem;">24 Hours</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; color: #888; font-size: 0.85rem; margin-bottom: 0.3rem;">LESSONS</div>
+                        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem;">45 Lessons</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; color: #888; font-size: 0.85rem; margin-bottom: 0.3rem;">LEVEL</div>
+                        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem;">Beginner</div>
+                    </div>
+                </div>
+
+                <h3 style="font-family: 'Playfair Display', serif; font-weight: 700; margin-bottom: 1rem;">Course Curriculum</h3>
+                <div class="lesson-list">
+                    <div class="lesson-item completed">
+                        <div class="lesson-info">
+                            <div class="lesson-number">1</div>
+                            <div class="lesson-details">
+                                <h4>Introduction to Web Development</h4>
+                                <div class="lesson-duration">15:30</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-item completed">
+                        <div class="lesson-info">
+                            <div class="lesson-number">2</div>
+                            <div class="lesson-details">
+                                <h4>HTML Fundamentals</h4>
+                                <div class="lesson-duration">28:45</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <div class="lesson-info">
+                            <div class="lesson-number">3</div>
+                            <div class="lesson-details">
+                                <h4>CSS Styling & Layouts</h4>
+                                <div class="lesson-duration">32:20</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <div class="lesson-info">
+                            <div class="lesson-number">4</div>
+                            <div class="lesson-details">
+                                <h4>JavaScript Basics</h4>
+                                <div class="lesson-duration">45:15</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-item">
+                        <div class="lesson-info">
+                            <div class="lesson-number">5</div>
+                            <div class="lesson-details">
+                                <h4>Building Interactive UIs</h4>
+                                <div class="lesson-duration">38:50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
